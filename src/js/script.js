@@ -85,13 +85,15 @@
       clickableTrigger.addEventListener('click', function (event) {
         event.preventDefault();
 
-        const activeProduct = document.querySelector(classNames.menuProduct.wrapperActive);
+        const activeProduct = document.querySelector('.product.' + classNames.menuProduct.wrapperActive);
+        console.log(activeProduct);
 
         if (activeProduct != null && activeProduct != thisProduct.element) {
           activeProduct.classList.remove(classNames.menuProduct.wrapperActive);
         }
 
         thisProduct.element.classList.toggle(classNames.menuProduct.wrapperActive);
+        console.log(thisProduct.element);
       });
 
     }

@@ -34,6 +34,7 @@ class AmountWidget extends BaseWidget {
   initActions() {
     const thisWidget = this;
 
+    thisWidget.value = settings.amountWidget.defaultValue;
     thisWidget.dom.input.addEventListener('change', function () { thisWidget.setValue(thisWidget.dom.input.value); });
     thisWidget.dom.linkDecrease.addEventListener('click', function (event) {
       event.preventDefault();

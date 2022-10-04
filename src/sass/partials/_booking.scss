@@ -157,6 +157,10 @@
 
     }
 
+    &.picked {
+      background: $color-success;
+    }
+
     &.booked {
       cursor: not-allowed;
       color: lighten($color-dark, 40%);
@@ -197,4 +201,9 @@
 .booking-options {
   @include flex(row, flex-start, space-between);
   margin: ($base-size * 4) auto;
+}
+
+.colidingHour {
+  background: lightgrey;
+  color: rgb(110, 110, 110);
 }

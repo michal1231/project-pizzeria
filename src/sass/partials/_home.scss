@@ -4,10 +4,10 @@
   background: $color-light;
   border-bottom: 1px solid lighten($color-dark, 70%);
   border-radius: $radius;
+}
 
-  & section {
-    margin-bottom: 96px;
-  }
+.home-wrapper section {
+  margin-bottom: 96px;
 }
 
 .home-header {
@@ -23,33 +23,6 @@
   margin: 3px;
   position: relative;
 
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-
-  & .h1 {
-    margin: 0;
-    @include center;
-    color: $color-light;
-    transition: 0.5s;
-  }
-
-  & .show-on-hover {
-    opacity: 0;
-    position: absolute;
-    color: $color-light;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    transition: 0.5s;
-    text-align: center;
-    width: 100%;
-
-  }
-
   &:hover .show-on-hover {
     top: 60%;
     opacity: 1;
@@ -60,6 +33,32 @@
   }
 }
 
+.half_width_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.half_width_card .h1 {
+  margin: 0;
+  @include center;
+  color: $color-light;
+  transition: 0.5s;
+}
+
+.half_width_card .show-on-hover {
+  opacity: 0;
+  position: absolute;
+  color: $color-light;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s;
+  text-align: center;
+  width: 100%;
+}
+
 .full_width_card {
   height: 120px;
   margin: 3px;
@@ -67,23 +66,23 @@
   width: 100%;
   background: $color-main;
   border-radius: 4px;
+}
 
-  & .h1 {
-    margin: 0;
-    @include center;
-    color: $color-light;
-    top: 40%;
-  }
+.full_width_card .h1 {
+  margin: 0;
+  @include center;
+  color: $color-light;
+  top: 40%;
+}
 
-  & span {
-    color: $color-light;
-    font-size: 15px;
-    text-transform: uppercase;
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -50%);
-  }
+.full_width_card span {
+  color: $color-light;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -100,26 +99,26 @@
   display: flex;
   justify-content: flex-start;
   width: 101%;
+}
 
-  & .h3 {
-    font-size: 14px;
-  }
+.carousel-cell .h3 {
+  font-size: 14px;
+}
 
-  & .cell-image {
-    width: 40%;
-    margin-right: 48px;
+.carousel-cell .cell-image {
+  width: 40%;
+  margin-right: 48px;
+}
 
-    & img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: 4px;
-    }
-  }
+.carousel-cell .cell-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
 
-  & .cell-description {
-    width: 50%;
-  }
+.carousel-cell .cell-description {
+  width: 50%;
 }
 
 section .galery {
@@ -140,13 +139,6 @@ section .galery {
   width: 32%;
   margin-bottom: 10px;
   position: relative;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-  }
 
   &::after {
     position: absolute;
@@ -172,46 +164,53 @@ section .galery {
     opacity: 0.5;
     border-radius: 4px;
   }
+}
 
-  & .fa-heart {
-    font-size: 24px;
-    position: absolute;
-    color: $color-light;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-  }
+.galery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
-  & .fa-share-nodes {
-    font-size: 24px;
-    position: absolute;
-    color: $color-light;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-  }
+.galery-card .fa-heart {
+  font-size: 24px;
+  position: absolute;
+  color: $color-light;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
 
-  &:hover .fa-heart {
-    opacity: 1;
-  }
+.galery-card .fa-share-nodes {
+  font-size: 24px;
+  position: absolute;
+  color: $color-light;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
 
-  &:hover .fa-share-nodes {
-    opacity: 1;
-  }
+.galery-card:hover .fa-heart {
+  opacity: 1;
+}
 
-  & .fa-heart:hover {
-    color: $color-main;
-  }
+.galery-card:hover .fa-share-nodes {
+  opacity: 1;
+}
 
-  & .fa-share-nodes:hover {
-    color: $color-main;
-  }
+.galery-card .fa-heart:hover {
+  color: $color-main;
+}
+
+.galery-card .fa-share-nodes:hover {
+  color: $color-main;
 }
 
 .footer a {

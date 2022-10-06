@@ -8,9 +8,12 @@
   <title>Pizzeria</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
     rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
 </head>
 
@@ -24,6 +27,7 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -65,6 +69,9 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -245,10 +252,104 @@
     </div>
   </script>
 
+  <script id="template-home-widget" type="text/x-handlebars-template">
+    <div class="home-widget">
+      <section class="home-header">
+        <div class="half_width_card">
+          <a href="#order" class="home-card-link"></a>
+          <img src="/images/assets/pizza-1.jpg">
+          <h1 class="h1">ORDER ONLINE</h1>
+          <span class="show-on-hover">Delicious food delivered to your door</span>
+        </div>
+        <div class="half_width_card">
+          <a href="#booking" class="home-card-link"></a>
+          <img src="/images/assets/pizza-2.jpg">
+          <h1 class="h1">BOOK A TABLE</h1>
+          <span class="show-on-hover">Fast and easy booking via our website</span>
+        </div>
+        <div class="full_width_card">
+          <h1 class="h1">OPENING HOURS</h1>
+          <span>TUE-SUN, 12PM - 12AM</span>
+        </div>
+      </section>
+      <section class="carousel">
+        <div class="carousel-cell">
+          <div class="cell-image">
+            <img src="/images/assets/pizza-3.jpg">
+          </div>
+          <div class="cell-description">
+            <h3 class="h3">AMAZING SERVICE!</h3>
+            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            <figcaption>— Margaret Osborne</figcaption>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="cell-image">
+            <img src="/images/assets/pizza-3.jpg">
+          </div>
+          <div class="cell-description">
+            <h3 class="h3">TASTY FOOD!</h3>
+            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            <figcaption>— John Smith</figcaption>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="cell-image">
+            <img src="/images/assets/pizza-3.jpg">
+          </div>
+          <div class="cell-description">
+            <h3 class="h3">CHARMING ATMOSPHERE</h3>
+            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            <figcaption>— Harry Hudson</figcaption>
+          </div>
+        </div>
+      </section>
+      <section class="galery">
+        <ul class="cards-wrapper">
+          <li class="galery-card">
+            <img src="/images/assets/pizza-4.jpg">
+            <i class="fa-sharp fa-solid fa-heart"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+          <li class="galery-card">
+            <img src="/images/assets/pizza-5.jpg">
+            <i class="fa-sharp fa-solid fa-heart"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+          <li class="galery-card">
+            <img src="/images/assets/pizza-6.jpg">
+            <i class="fa-sharp fa-solid fa-heart"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+          <li class="galery-card">
+            <img src="/images/assets/pizza-7.jpg">
+            <i class="fa-sharp fa-solid fa-heart"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+          <li class="galery-card">
+            <img src="/images/assets/pizza-8.jpg">
+            <i class="fa-sharp fa-solid fa-heart"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+          <li class="galery-card">
+            <img src="/images/assets/pizza-9.jpg">
+            <i class="fa-sharp fa-solid fa-heart"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+        </ul>
+      </section>
+      <section class="footer">
+        <a href="#">View more on Instagram</a>
+      </section>
+    </div>
+  </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-  <script src="js/app.js" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="js/app.js" type="module"></script>
+
 </body>
 
 </html>
